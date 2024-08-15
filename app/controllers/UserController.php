@@ -118,6 +118,33 @@ class UserController extends AppController
         $this->setMeta(___('tpl_user_credentials'));
     }
 
+    public function downloadAction()
+    {
+        if (!User::checkAuth()) {
+            redirect(base_url() . 'user/login');
+        }
+
+        $lang = App::$app->getProperty('language');
+        $downloadId = get('id');
+        $file = $this->model->get_user_file($_SESSION['user']['id'], $downloadId, $lang['id']);
+        if ($file) {
+            $path = WWW . "/downloads/{$file['filename']}";
+            if (file_exists($path)) {
+                header('Content-Type: application/octet-stream');
+                header('Content-Disposition: attachment; filename="' . basename($file['original_name']) . '"');
+                header('Expires: 0');
+                header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+                header('Pragma: public');
+                header('Content-Length: ' . filesize($path));
+                readfile($path);
+                exit();
+            } else {
+                $_SESSION['errors'] = ___('user_download_error');
+            }
+        }
+        redirect();
+    }
+
     public function logoutAction()
     {
         if (User::checkAuth()) {

@@ -96,6 +96,14 @@ class User extends AppModel
         return R::getAll("SELECT od.*, d.*, dd.* FROM order_downloads od
             JOIN downloads d ON d.id = od.download_id
             JOIN download_description dd ON d.id = dd.download_id
-        WHERE od.user_id = ? AND od.status = 1 AND dd.lang_id = ? LIMIT $start, $perpage", [$userId, $langId]);
+        WHERE od.user_id = ? AND dd.lang_id = ? AND od.status = 1 LIMIT $start, $perpage", [$userId, $langId]);
+    }
+
+    public function get_user_file($userId, $downloadId, $langId): array
+    {
+        return R::getRow("SELECT od.*, d.*, dd.* FROM order_downloads od
+            JOIN downloads d ON d.id = od.download_id
+            JOIN download_description dd ON d.id = dd.download_id
+        WHERE od.user_id = ? AND dd.download_id = ? AND dd.lang_id = ? AND od.status = 1", [$userId, $downloadId, $langId]);
     }
 }
