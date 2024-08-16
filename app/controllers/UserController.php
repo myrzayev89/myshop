@@ -15,11 +15,10 @@ class UserController extends AppController
             redirect(base_url());
         }
         if (!empty($_POST)) {
-            $data = $_POST;
-            $this->model->load($data);
-            if (!$this->model->validate($data) || !$this->model->checkUnique()) {
+            $this->model->load();
+            if (!$this->model->validate($this->model->attributes) || !$this->model->checkUnique()) {
                 $this->model->getErrors();
-                $_SESSION['form_data'] = $data;
+                $_SESSION['form_data'] = $this->model->attributes;
             } else {
                 $this->model->attributes['password'] = password_hash($this->model->attributes['password'], PASSWORD_DEFAULT);
                 if ($this->model->save('users')) {
@@ -110,14 +109,6 @@ class UserController extends AppController
         $this->set(compact('files', 'pagination'));
     }
 
-    public function credentialsAction()
-    {
-        if (!User::checkAuth()) {
-            redirect(base_url() . 'user/login');
-        }
-        $this->setMeta(___('tpl_user_credentials'));
-    }
-
     public function downloadAction()
     {
         if (!User::checkAuth()) {
@@ -143,6 +134,44 @@ class UserController extends AppController
             }
         }
         redirect();
+    }
+
+    public function credentialsAction()
+    {
+        if (!User::checkAuth()) {
+            redirect(base_url() . 'user/login');
+        }
+
+        if (!empty($_POST)) {
+            // debug($_POST, true);
+            $this->model->load();
+            unset($this->model->attributes['email']);
+            if (empty($this->model->attributes['password'])) {
+                unset($this->model->attributes['password']);
+            }
+
+            if (!$this->model->validate($this->model->attributes)) {
+                $this->model->getErrors();
+            } else {
+                if (!empty($this->model->attributes['password'])) {
+                    $this->model->attributes['password'] = password_hash($this->model->attributes['password'], PASSWORD_DEFAULT);
+                }
+
+                if ($this->model->update('users', $_SESSION['user']['id'])) {
+                    $_SESSION['success'] = ___('user_credentials_success');
+                    foreach ($this->model->attributes as $key => $value) {
+                        if (!empty($value) && $key != 'password') {
+                            $_SESSION['user'][$key] = $value;
+                        }
+                    }
+                } else {
+                    $_SESSION['errors'] = ___('user_credentials_error');
+                }
+            }
+            redirect();
+        }
+
+        $this->setMeta(___('tpl_user_credentials'));
     }
 
     public function logoutAction()

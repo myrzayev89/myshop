@@ -7,15 +7,16 @@ use RedBeanPHP\R;
 class User extends AppModel
 {
     public array $attributes = [
-        'email' => '', 
-        'password' => '', 
-        'name' => '', 
+        'email' => '',
+        'password' => '',
+        'name' => '',
         'address' => '',
     ];
 
     public array $rules = [
         'required' => ['email', 'password', 'name', 'address',],
         'email' => ['email',],
+        'optional' => ['email', 'password'],
         'lengthMin' => [
             ['password', 6],
         ],

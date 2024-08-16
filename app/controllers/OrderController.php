@@ -21,18 +21,18 @@ class OrderController extends AppController
             // add user if not auth
             if (!User::checkAuth()) {
                 $user = new User();
-                $data = $_POST;
-                $user->load($data);
-                if (!$user->validate($data) || !$user->checkUnique()) {
+                $user->load();
+                if (!$user->validate($user->attributes) || !$user->checkUnique()) {
                     $user->getErrors();
-                    $_SESSION['form_data'] = $data;
+                    $_SESSION['form_data'] = $user->attributes;
+                    redirect();
                 } else {
                     $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
                     if (!$user_id = $user->save('users')) {
                         $_SESSION['errors'] = ___('tpl_order_error_register');
+                        redirect();
                     }
                 }
-                redirect();
             }
 
             // add orders

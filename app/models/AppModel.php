@@ -9,8 +9,9 @@ use RedBeanPHP\R;
 
 class AppModel extends Model
 {
-    public function load($data)
+    public function load($post = true)
     {
+        $data = $post ? $_POST : $_GET;
         foreach ($this->attributes as $key => $value) {
             if (isset($data[$key])) {
                 $this->attributes[$key] = $data[$key];
@@ -60,6 +61,17 @@ class AppModel extends Model
         $tpl = R::dispense($table);
         foreach ($this->attributes as $key => $value) {
             $tpl->$key = $value;
+        }
+        return R::store($tpl);
+    }
+
+    public function update($table, $id): int|string
+    {
+        $tpl = R::load($table, $id);
+        foreach ($this->attributes as $key => $value) {
+            if ($value != '') {
+                $tpl->$key = $value;
+            }
         }
         return R::store($tpl);
     }
