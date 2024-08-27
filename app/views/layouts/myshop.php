@@ -1,8 +1,3 @@
-<?php
-use core\View;
-
-/** @var $this View */
-?>
 <?php $this->getPart('layouts/parts/header'); ?>
 <?php if (!empty($_SESSION['success'])): ?>
     <div class="container">
