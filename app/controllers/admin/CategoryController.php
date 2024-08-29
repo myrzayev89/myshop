@@ -2,7 +2,9 @@
 
 namespace app\controllers\admin;
 
-use RedBeanPHP\R;
+use app\models\admin\Category;
+
+/** @property Category $model */
 class CategoryController extends AppController
 {
     public function indexAction()
@@ -10,25 +12,21 @@ class CategoryController extends AppController
         $this->setMeta('Bölmələr');
     }
 
+    public function createAction()
+    {
+        if (!empty($_POST)) {
+            if ($this->model->category_validate()) {
+                $_SESSION['success'] = 'Kateqoriya saxlanildi';
+            }
+            redirect();
+        }
+        $this->setMeta('Yeni Bölmə');
+    }
+
     public function deleteAction()
     {
-        $id = get('id');
-        $errors = '';
-        $children = R::count('categories', 'parent_id = ?', [$id]);
-        $product = R::count('products', 'category_id = ?', [$id]);
-
-        if ($children) {
-            $errors .= 'Kateqoriya aid alt kateqoriya var!';
-        }
-        if ($product) {
-            $errors .= 'Kateqoriya aid məhsul var!';
-        }
-
-        if ($errors) {
-            $_SESSION['errors'] = $errors;
-        } else {
-            R::exec('DELETE FROM categories WHERE id = ?', [$id]);
-            R::exec('DELETE FROM category_description WHERE category_id = ?', [$id]);
+        $categoryId = get('id');
+        if ($this->model->category_delete($categoryId)) {
             $_SESSION['success'] = 'Kateqoriya silindi';
         }
         redirect();

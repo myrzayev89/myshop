@@ -17,6 +17,7 @@ class Menu
     protected $cache = 3600;
     protected $cacheKey = 'myshop_menu';
     protected $attrs = [];
+    protected $prepend = '';
     protected $language;
 
     public function __construct($options = [])
@@ -60,6 +61,7 @@ class Menu
             }
         }
         echo "<{$this->container} class='{$this->class}' $attrs>";
+        echo $this->prepend;
         echo $this->menuHtml;
         echo "</{$this->container}>";
     }

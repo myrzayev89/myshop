@@ -90,3 +90,8 @@ function get_field_value($name)
 {
     return isset($_SESSION['form_data'][$name]) ? $_SESSION['form_data'][$name] : '';
 }
+
+function get_field_array_value($name, $key, $title)
+{
+    return isset($_SESSION['form_data'][$name][$key][$title]) ? $_SESSION['form_data'][$name][$key][$title] : '';
+}

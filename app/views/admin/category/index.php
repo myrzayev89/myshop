@@ -32,7 +32,7 @@
                             <?php new \app\widgets\menu\Menu([
                                 'class' => 'table table-bordered',
                                 'cache' => 0,
-                                'cacheKey' => 'admin_menu',
+                                'cacheKey' => 'admin_cat_table',
                                 'tpl' => APP . '/widgets/menu/admin_table_tpl.php',
                                 'container' => 'table',
                             ]); ?>

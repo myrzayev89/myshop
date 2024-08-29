@@ -154,3 +154,17 @@
 =====================
 [27.08.2024 21:30:08] Xəta: Undefined array key "parent_id" | Fayl: C:\xampp\htdocs\myshop\app\widgets\menu\Menu.php | Xətt: 72
 =====================
+[29.08.2024 04:52:07] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[29.08.2024 04:52:30] Xəta: Metod (editAction) tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 61
+=====================
+[29.08.2024 04:52:34] Xəta: Metod (createAction) tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 61
+=====================
+[29.08.2024 20:07:13] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[29.08.2024 20:29:07] Xəta: Call to undefined function get_field_array_value() | Fayl: C:\xampp\htdocs\myshop\app\views\admin\category\create.php | Xətt: 50
+=====================
+[29.08.2024 20:29:07] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[29.08.2024 20:32:13] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
