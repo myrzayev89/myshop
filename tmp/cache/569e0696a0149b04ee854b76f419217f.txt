@@ -1,12 +1,12 @@
-a:2:{s:4:"data";s:1102:"<li class="nav-item ">
+a:2:{s:4:"data";s:1217:"<li class="nav-item ">
         <a class="nav-link "
-            href="category/kompyuterler" >Kompyuterlər</a>
+            href="category/kompyuterler" >Computers</a>
     </li><li class="nav-item ">
         <a class="nav-link "
-            href="category/planshetler" >Planşetlər</a>
+            href="category/planshetler" >Tablets</a>
     </li><li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle"
-            href="category/notbuklar" data-bs-toggle="dropdown">Notbuklar</a>
+            href="category/notbuklar" data-bs-toggle="dropdown">Notebooks</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li class="nav-item ">
         <a class="nav-link "
@@ -20,8 +20,12 @@ a:2:{s:4:"data";s:1102:"<li class="nav-item ">
     </li>        </ul>
     </li><li class="nav-item ">
         <a class="nav-link "
-            href="category/telefonlar" >Telefonlar</a>
+            href="category/telefonlar" >Mobiles</a>
     </li><li class="nav-item ">
         <a class="nav-link "
-            href="category/kameralar" >Kameralar</a>
-    </li>";s:8:"end_time";i:1725131429;}
+            href="category/kameralar" >Cameras</a>
+    </li><li class="nav-item ">
+        <a class="nav-link "
+            href="category/defter-kitablar" >Notebook Books
+</a>
+    </li>";s:8:"end_time";i:1725131378;}

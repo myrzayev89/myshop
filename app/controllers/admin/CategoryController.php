@@ -16,7 +16,11 @@ class CategoryController extends AppController
     {
         if (!empty($_POST)) {
             if ($this->model->category_validate()) {
-                $_SESSION['success'] = 'Kateqoriya saxlanildi';
+                if ($this->model->category_save()) {
+                    $_SESSION['success'] = 'Kateqoriya əlavə edildi';
+                } else {
+                    $_SESSION['errors'] = 'Xəta baş verdi!';
+                }
             }
             redirect();
         }

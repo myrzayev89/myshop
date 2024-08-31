@@ -24,6 +24,41 @@ class Category extends AppModel
         return true;
     }
 
+    public function category_save(): bool
+    {
+        R::begin();
+        try {
+            // add cat
+            $category = R::dispense('categories');
+            $category->parent_id = $_POST['parent_id'];
+            $category_id = R::store($category);
+            $category->slug = AppModel::create_slug(
+                'categories',
+                'slug',
+                $_POST['category_description'][1]['title'],
+                $category_id,
+            );
+            R::store($category);
+
+            // add cat_desc
+            foreach ($_POST['category_description'] as $lang_id => $item) {
+                R::exec("INSERT INTO category_description (category_id, lang_id, title, excerpt, description, keywords) VALUES (?,?,?,?,?,?)", [
+                    $category_id,
+                    $lang_id,
+                    $item['title'],
+                    $item['excerpt'],
+                    $item['description'],
+                    $item['keywords'],
+                ]);
+            }
+            return R::commit();
+        } catch (\Exception $e) {
+            R::rollback();
+            // throw $e;
+            return false;
+        }
+    }
+
     public function category_delete($id): bool
     {
         R::begin();
