@@ -4,6 +4,7 @@ namespace app\models\admin;
 
 use RedBeanPHP\R;
 use app\models\AppModel;
+use core\App;
 
 class Category extends AppModel
 {
@@ -29,13 +30,14 @@ class Category extends AppModel
         R::begin();
         try {
             // add cat
+            $langId = App::$app->getProperty('language')['id'];
             $category = R::dispense('categories');
             $category->parent_id = $_POST['parent_id'];
             $category_id = R::store($category);
             $category->slug = AppModel::create_slug(
                 'categories',
                 'slug',
-                $_POST['category_description'][1]['title'],
+                $_POST['category_description'][$langId]['title'],
                 $category_id,
             );
             R::store($category);
