@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <form action="" method="post">
                             <div class="form-group">
-                                <label class="required" for="parent_id">Ana kateqoriya</label>
+                                <label class="required" for="parent_id">Kateqoriya seçin</label>
                                 <?php new \app\widgets\menu\Menu([
                                     'cache' => 0,
                                     'cacheKey' => 'admin_cat_select',

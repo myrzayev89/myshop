@@ -1,10 +1,7 @@
-<?php
-$parent_id = \core\App::$app->getProperty('parent_id');
-$get_id = get('id');
-?>
-
-<option value="<?= $id ?>" <?php if ($id == $parent_id) echo 'selected'; ?> 
-    <?php if ($get_id == $id) echo 'disabled'; ?>>
+<?php $get_id = get('id'); ?>
+<option value="<?= $id ?>" <?php if ($id == get_parent_id())
+      echo 'selected'; ?> <?php if ($get_id == $id)
+             echo 'disabled'; ?>>
     <?= $tab . $category['title'] ?>
 </option>
 <?php if (isset($category['children'])): ?>

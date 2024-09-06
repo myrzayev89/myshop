@@ -8,3 +8,25 @@
 =====================
 [02.09.2024 16:11:44] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
 =====================
+[04.09.2024 21:15:35] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[04.09.2024 21:39:00] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[05.09.2024 08:20:02] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[05.09.2024 08:34:36] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[05.09.2024 08:37:10] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[05.09.2024 08:38:01] Xəta: Undefined array key "parent_id" | Fayl: C:\xampp\htdocs\myshop\app\models\admin\Category.php | Xətt: 17
+=====================
+[05.09.2024 08:38:28] Xəta: Undefined array key "parent_id" | Fayl: C:\xampp\htdocs\myshop\app\models\admin\Category.php | Xətt: 18
+=====================
+[05.09.2024 08:42:18] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[06.09.2024 04:44:19] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[06.09.2024 04:53:39] Xəta: Undefined array key "parent_id" | Fayl: C:\xampp\htdocs\myshop\app\controllers\admin\CategoryController.php | Xətt: 29
+=====================
+[06.09.2024 04:55:01] Xəta: Undefined array key "parent_id" | Fayl: C:\xampp\htdocs\myshop\app\controllers\admin\CategoryController.php | Xətt: 30
+=====================

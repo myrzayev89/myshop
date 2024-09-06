@@ -1,4 +1,4 @@
-a:2:{s:4:"data";s:1102:"<li class="nav-item ">
+a:2:{s:4:"data";s:965:"<li class="nav-item ">
         <a class="nav-link "
             href="category/kompyuterler" >Kompyuterlər</a>
     </li><li class="nav-item ">
@@ -14,9 +14,6 @@ a:2:{s:4:"data";s:1102:"<li class="nav-item ">
     </li><li class="nav-item ">
         <a class="nav-link "
             href="category/windows" >Windows</a>
-    </li><li class="nav-item ">
-        <a class="nav-link "
-            href="category/dell-inspiron-n5110" >DELL Inspiron N5110</a>
     </li>        </ul>
     </li><li class="nav-item ">
         <a class="nav-link "
@@ -24,4 +21,4 @@ a:2:{s:4:"data";s:1102:"<li class="nav-item ">
     </li><li class="nav-item ">
         <a class="nav-link "
             href="category/kameralar" >Kameralar</a>
-    </li>";s:8:"end_time";i:1725272057;}
+    </li>";s:8:"end_time";i:1725590665;}

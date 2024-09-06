@@ -3,6 +3,7 @@
 namespace app\controllers\admin;
 
 use app\models\admin\Category;
+use core\App;
 
 /** @property Category $model */
 class CategoryController extends AppController

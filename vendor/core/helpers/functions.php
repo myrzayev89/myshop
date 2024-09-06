@@ -95,3 +95,11 @@ function get_field_array_value($name, $key, $title)
 {
     return isset($_SESSION['form_data'][$name][$key][$title]) ? $_SESSION['form_data'][$name][$key][$title] : '';
 }
+
+function get_parent_id($parentId = 0)
+{
+    if ($parentId) {
+        return $parentId;
+    }
+    return isset($_SESSION['form_data']['parent_id']) ? $_SESSION['form_data']['parent_id'] : 0;
+}
