@@ -30,3 +30,23 @@
 =====================
 [06.09.2024 04:55:01] Xəta: Undefined array key "parent_id" | Fayl: C:\xampp\htdocs\myshop\app\controllers\admin\CategoryController.php | Xətt: 30
 =====================
+[07.09.2024 15:39:02] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[07.09.2024 15:49:14] Xəta: Metod (editAction) tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 61
+=====================
+[07.09.2024 16:13:22] Xəta: Undefined array key "title" | Fayl: C:\xampp\htdocs\myshop\app\controllers\admin\CategoryController.php | Xətt: 38
+=====================
+[07.09.2024 16:13:42] Xəta: Undefined array key "title" | Fayl: C:\xampp\htdocs\myshop\app\views\admin\category\edit.php | Xətt: 6
+=====================
+[07.09.2024 16:13:58] Xəta: Undefined array key "title" | Fayl: C:\xampp\htdocs\myshop\app\views\admin\category\edit.php | Xətt: 6
+=====================
+[07.09.2024 16:17:27] Xəta: Undefined variable $categoryId | Fayl: C:\xampp\htdocs\myshop\app\widgets\menu\admin_select_tpl.php | Xətt: 2
+=====================
+[07.09.2024 16:19:58] Xəta: Undefined variable $categoryId | Fayl: C:\xampp\htdocs\myshop\app\widgets\menu\admin_select_tpl.php | Xətt: 2
+=====================
+[07.09.2024 16:48:48] Xəta: Too few arguments to function app\models\admin\Category::category_update(), 0 passed in C:\xampp\htdocs\myshop\app\controllers\admin\CategoryController.php on line 36 and exactly 1 expected | Fayl: C:\xampp\htdocs\myshop\app\models\admin\Category.php | Xətt: 71
+=====================
+[07.09.2024 16:49:08] Xəta: Undefined array key "parent_id" | Fayl: C:\xampp\htdocs\myshop\app\models\admin\Category.php | Xətt: 80
+=====================
+[07.09.2024 16:53:38] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
