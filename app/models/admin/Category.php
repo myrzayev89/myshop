@@ -32,7 +32,7 @@ class Category extends AppModel
             // add cat
             $langId = App::$app->getProperty('language')['id'];
             $category = R::dispense('categories');
-            $category->parent_id = post('parent_id', 'i');
+            $category->parent_id = post('parent_id', 'i') ?? 0;
             $category_id = R::store($category);
             $category->slug = AppModel::create_slug(
                 'categories',

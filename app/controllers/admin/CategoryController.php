@@ -32,7 +32,6 @@ class CategoryController extends AppController
     {
         $categoryId = get('id');
         if (!empty($_POST)) {
-            debug($_POST, true);
             if ($this->model->category_validate()) {
                 if ($this->model->category_update($categoryId)) {
                     $_SESSION['success'] = 'Kateqoriya redaktə edildi';
