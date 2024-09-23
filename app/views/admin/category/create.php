@@ -120,9 +120,6 @@
 <!-- /.content -->
 
 <script>
-    // https://question-it.com/questions/3558262/kak-ja-mogu-sozdat-neskolko-redaktorov-s-imenem-klassa
-    // https://ckeditor.com/docs/ckfinder/demo/ckfinder3/samples/ckeditor.html
-    // extension=gd
     window.editors = {};
     document.querySelectorAll('.editor').forEach((node, index) => {
         ClassicEditor
