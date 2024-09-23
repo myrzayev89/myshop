@@ -39,7 +39,7 @@ function base_url()
  * @param string $type Values 'i', 'f', 's'
  * @return int|float|string
  */
-function get($key, $type = 'i')
+function get($key, $type = 'i'): float|int|string
 {
     $param = $key;
     $$param = $_GET[$param] ?? '';

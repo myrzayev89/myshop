@@ -90,3 +90,23 @@
 =====================
 [23.09.2024 18:39:38] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
 =====================
+[23.09.2024 20:52:42] Xəta: No connection to DB | Fayl: C:\xampp\htdocs\myshop\vendor\core\Db.php | Xətt: 16
+=====================
+[23.09.2024 20:52:42] Xəta: Səhifə tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 67
+=====================
+[23.09.2024 21:00:51] Xəta: Kontroller (app\controllers\admin\ProductController) tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 64
+=====================
+[23.09.2024 21:14:23] Xəta: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' LIMIT 0, 3' at line 3 | Fayl: C:\xampp\htdocs\myshop\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Xətt: 206
+=====================
+[23.09.2024 21:15:13] Xəta: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' LIMIT 0, 3' at line 3 | Fayl: C:\xampp\htdocs\myshop\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Xətt: 206
+=====================
+[23.09.2024 21:16:45] Xəta: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' LIMIT 0, 3' at line 3 | Fayl: C:\xampp\htdocs\myshop\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Xətt: 206
+=====================
+[23.09.2024 21:27:22] Xəta: Undefined property: core\Pagination::$start | Fayl: C:\xampp\htdocs\myshop\app\views\admin\product\index.php | Xətt: 63
+=====================
+[23.09.2024 21:32:30] Xəta: require(C:\xampp\htdocs\myshop/app/widgets/menu/admin_table_tpl.php): Failed to open stream: No such file or directory | Fayl: C:\xampp\htdocs\myshop\app\widgets\menu\Menu.php | Xətt: 95
+=====================
+[23.09.2024 21:32:33] Xəta: require(C:\xampp\htdocs\myshop/app/widgets/menu/admin_table_tpl.php): Failed to open stream: No such file or directory | Fayl: C:\xampp\htdocs\myshop\app\widgets\menu\Menu.php | Xətt: 95
+=====================
+[23.09.2024 21:37:27] Xəta: Metod (createAction) tapılmadı! | Fayl: C:\xampp\htdocs\myshop\vendor\core\Router.php | Xətt: 61
+=====================

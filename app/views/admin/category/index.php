@@ -33,7 +33,7 @@
                                 'class' => 'table table-bordered',
                                 'cache' => 0,
                                 'cacheKey' => 'admin_cat_table',
-                                'tpl' => APP . '/widgets/menu/admin_table_tpl.php',
+                                'tpl' => APP . '/widgets/menu/admin_category_table.php',
                                 'container' => 'table',
                             ]); ?>
                         </div>
